@@ -71,7 +71,7 @@ var isJSON = function (str) {
 var getTokenResponse = function (query) {
   var config = ServiceConfiguration.configurations.findOne({service: 'linkedin'});
   if (!config)
-    throw new ServiceConfiguration.ConfigError("Service not configured");
+    throw new ServiceConfiguration.ConfigError('linkedin');
 
   var responseContent;
   try {

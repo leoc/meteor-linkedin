@@ -12,7 +12,7 @@ LinkedIn.requestCredential = function (options, credentialRequestCompleteCallbac
 
   var config = ServiceConfiguration.configurations.findOne({service: 'linkedin'});
   if (!config) {
-    credentialRequestCompleteCallback && credentialRequestCompleteCallback(new ServiceConfiguration.ConfigError("Service not configured"));
+    credentialRequestCompleteCallback && credentialRequestCompleteCallback(new ServiceConfiguration.ConfigError('linkedin'));
     return;
   }
 
