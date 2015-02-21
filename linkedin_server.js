@@ -113,7 +113,7 @@ var getTokenResponse = function (query) {
 
 var getIdentity = function (accessToken) {
   try {
-    return Meteor.http.get("https://www.linkedin.com/v1/people/~", {
+    return Meteor.http.get("https://api.linkedin.com/v1/people/~", {
       params: {oauth2_access_token: accessToken, format: 'json'}}).data;
   } catch (err) {
     throw new Error("Failed to fetch identity from LinkedIn. " + err.message);
